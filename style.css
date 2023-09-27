@@ -1,0 +1,513 @@
+/* Updated styles for the header and navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6600; /* Set a color for the logo */
+}
+
+/* Styles for the "Events" dropdown indicator */
+.menu li:nth-child(5) {
+    position: relative; /* Set the parent to a relative position */
+}
+
+/* Styles for the "Events" dropdown indicator */
+.menu li:nth-child(5) {
+    position: relative; /* Set the parent to a relative position */
+}
+
+.menu li:nth-child(5)::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent; /* Left side of the triangle */
+    border-right: 5px solid transparent; /* Right side of the triangle */
+    border-top: 5px solid #fff; /* Top side of the triangle */
+    margin-left: 5px; /* Adjust spacing from the "Events" text */
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Add animation effect */
+}
+
+/* Rotate the triangle when the dropdown is active */
+.menu li:nth-child(5).active::after {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    position: relative;
+    border: 2px solid transparent; /* Add border to all menu items */
+    padding: 8px 15px; /* Add padding to all menu items */
+}
+
+.menu a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #ff6600; /* Highlight color */
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ff6600; /* Change the color on hover */
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* Styles for the dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 380px; /* Set a fixed width for the submenu */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 0;
+    border-bottom: 1px solid #fff; /* Add a white bottom border to separate items */
+}
+
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 8px 15px; /* Add padding to each option */
+    white-space: nowrap; /* Prevent text from wrapping */
+    display: block; /* Display each option on a single line */
+}
+.submenu a:hover {
+    color: #ff6600;
+}
+
+/* Highlight the Events option when clicked */
+.menu .active {
+    border-color: #ff6600; /* Change border color */
+}
+
+
+
+/* Reset margin and padding for body and the section */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Hide horizontal overflow if any */
+}
+
+.kathak-info {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0; /* Reset margin */
+}
+
+
+
+
+/* Styles for the Kathak information section */
+.kathak-info {
+    background-color: #333;
+    color: #fff;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.kathak-logo {
+    flex: 1;
+    margin-right: 20px;
+    max-width: 200px;
+}
+
+.kathak-logo img {
+    max-width: 100%;
+}
+
+.kathak-text {
+    flex: 3;
+}
+
+.kathak-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.kathak-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* Style for the section divider */
+.section-divider {
+    border: none;
+    height: 2px; /* Set the height of the white line */
+    background-color: #fff; /* Color of the white line */
+    margin: 2px 0; /* Adjust the margin for spacing */
+}
+
+
+/* Styles for the .kathak2 section */
+.kathak2 {
+    background-color: #333; /* Set background color to #333 */
+    color: #fff; /* Text color */
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row; /* Change to row to place the photo on the right */
+    justify-content: space-between; /* Distribute space between elements */
+    align-items: center;
+}
+
+.kathak2 .kathak-text {
+    max-width: 50%; /* Set maximum width for the text content */
+    text-align: left; /* Align text to the left */
+    padding: 20px; /* Add padding to create space between the text and the box */
+    background-color: #000; /* Set box background color to matte black */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Add a subtle white shadow */
+}
+
+.kathak2 .kathak-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.kathak2 .kathak-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.kathak2 .kathak-photo {
+    max-width: 30%; /* Make the photo smaller by reducing its maximum width */
+}
+
+.kathak2 .kathak-photo img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 50%; /* Create a circular shape for the image */
+}
+
+
+.section-divider {
+    border: none;
+    height: 2px; /* Set the height of the white line */
+    background-color: #fff; /* Color of the white line */
+    margin: 2px 0; /* Adjust the margin for spacing */
+}
+
+
+
+/* Updated styles for the .kathak3 section */
+.kathak3 {
+    background-color: #333; /* Set background color to #333 */
+    color: #fff; /* Text color */
+    padding: 40px;
+    text-align: center; /* Center-align text */
+}
+
+.kathak3 .kathak-text {
+    max-width: 800px; /* Set maximum width for the text content */
+    margin: 0 auto 30px; /* Center the text and add space below */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background color */
+    padding: 20px; /* Add padding to the paragraph */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Add shadow to the box */
+}
+
+.kathak3 .kathak-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    border: 5px solid #fff; /* Add a white 5px border to the paragraph */
+    padding: 10px; /* Add padding to the paragraph */
+    border-radius: 5px; /* Add border radius */
+}
+
+.kathak3 .kathak-photos {
+    display: flex;
+    justify-content: center;
+}
+
+.kathak3 .kathak-photo {
+    margin: 0 10px; /* Add space between photos */
+    overflow: hidden;
+    position: relative;
+}
+
+.kathak3 .kathak-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Create a circular shape for the image */
+    transition: transform 0.3s ease; /* Add animation transition */
+}
+
+.kathak3 .kathak-photo img:hover {
+    transform: scale(1.1); /* Add a slight scale-up animation on hover */
+}
+
+
+
+.section-divider {
+    border: none;
+    height: 2px; /* Set the height of the white line */
+    background-color: #fff; /* Color of the white line */
+    margin: 2px 0; /* Adjust the margin for spacing */
+}
+
+
+
+
+
+
+/* Styles for the .kathak4 section */
+.kathak4 {
+    background-color: #333; /* Set background color to #333 */
+    color: #fff; /* Text color */
+    padding: 40px;
+    text-align: center; /* Center-align text */
+}
+
+.testimonial-carousel {
+    width: 100%; /* Set the width of the carousel container */
+    height: 100px; /* Set the height to accommodate the paragraphs */
+    overflow: hidden; /* Hide overflow to create scrolling effect */
+    position: relative; /* Position the paragraphs relative to the container */
+}
+
+.testimonial {
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+    opacity: 0; /* Initially hidden */
+    position: absolute; /* Position the paragraphs absolutely within the container */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex; /* Center-align content vertically and horizontally */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff; /* Add a white 2px border to the paragraphs */
+}
+
+.active {
+    opacity: 1; /* Make active testimonial visible */
+}
+
+
+
+.section-divider {
+    border: none;
+    height: 2px; /* Set the height of the white line */
+    background-color: #fff; /* Color of the white line */
+    margin: 2px 0; /* Adjust the margin for spacing */
+}
+
+
+
+
+/* Styles for the .kathak5 section */
+.kathak5 {
+    background-color: #333; /* Set background color to #333 */
+    color: #fff; /* Text color */
+    padding: 40px;
+    text-align: center; /* Center-align text */
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    flex-wrap: wrap; /* Wrap items to a new line if necessary */
+}
+
+.contact-item {
+    margin: 0 20px;
+    text-align: center;
+}
+
+.contact-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-item li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact-item p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.contact-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #ff9900;
+}
+/* Styles for the footer */
+.footer {
+    background-color: #333; /* Set background color to #333 */
+    color: #fff; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Increase padding for a modern look */
+    font-size: 14px;
+}
+
+
+/* General styles for mobile-friendly design */
+@media screen and (max-width: 767px) {
+    /* Styles for screens with a maximum width of 767px (typical for mobile devices) */
+
+    /* Center-align header elements */
+    header {
+        text-align: center;
+    }
+
+    .logo {
+        /* Hide the logo on mobile devices */
+        display: none;
+    }
+
+    .menu {
+        /* Adjust the styles for the menu on mobile devices */
+        justify-content: center; /* Center-align the menu items */
+        margin-top: 20px; /* Add some top margin for spacing */
+    }
+
+    .menu li {
+        margin: 0; /* Remove margin between menu items to display them in a row */
+    }
+
+    .menu .dropdown-btn {
+        background-color: #ff6600;
+        border-color: #ff6600;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: left;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu .dropdown-btn::after {
+        display: none; /* Hide the triangle on mobile devices */
+    }
+
+    .menu .submenu {
+        width: 100%;
+        left: 0;
+        top: 100%;
+    }
+
+    /* Center-align other sections and content */
+    section, .footer {
+        text-align: center;
+    }
+
+    /* Remove padding and margin from sections */
+      .kathak3, .kathak4, .kathak5, .section-divider {
+        padding: 4;
+        margin: 4;
+    }
+    .kathak-info {
+        margin-top: 20px;
+        align-items: center; /* Center content horizontally and vertically */
+    }
+
+    /* Center-align text and images in sections */
+    .kathak-info, .kathak3, .kathak4, .kathak5 {
+        display: block; /* Change to block to stack elements vertically */
+    }
+
+    /* Adjust image styles for mobile */
+     .kathak-photo img, .kathak3 .kathak-photo img, .kathak5 .kathak-photo img {
+        max-width: 100%; /* Ensure images don't overflow the screen */
+    }
+
+    /* Additional styles as needed */
+    .kathak2 {
+        justify-content: center; /* Center content horizontally */
+        flex-direction: column; /* Display content in a column */
+        align-items: center; /* Center content vertically */
+    }
+
+    /* Reset styles for kathak-text and kathak-photo */
+    .kathak2 .kathak-text {
+        max-width: 100%; /* Allow text to take full width */
+        text-align: center; /* Center-align text */
+    }
+
+    .kathak2 .kathak-photo {
+        max-width: 100%; /* Allow the photo to take full width */
+    }
+}
